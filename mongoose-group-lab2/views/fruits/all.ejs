@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<h2>All Fruits</h2>
+<ul>
+  <% fruits.forEach((fruit) => { %>
+    <li>
+      <a href="/fruits/<%= fruit._id %>">
+        <%= fruit.name %></a>
+    </li>
+  <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

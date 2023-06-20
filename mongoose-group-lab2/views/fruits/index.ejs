@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<h2>All Fruits</h2>
+<tbody>
+  <ul>
+    <% fruits.forEach((fruit) => { %>
+      <li>
+        <a href="/fruits/<%= fruit.id %>"><%= fruit.name %></a>
+        <!-- <br>Vitamins: <%= fruit.vitamins %><br>
+        Daily Value: <%= fruit.dailyValue %> -->
+      </li>
+    <% }); %>
+  </ul>
+</tbody>
+
+<%- include('../partials/footer') %>

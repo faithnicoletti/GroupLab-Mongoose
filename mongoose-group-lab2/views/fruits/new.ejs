@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Fruit</h2>
+<form action="/fruits" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  <label>Vitamins:
+    <select name="vitamins">
+      <option value="Vitamin A">Vitamin A</option>
+      <option value="Vitamin B">Vitamin B</option>
+      <option value="Vitamin C">Vitamin C</option>
+      <option value="Folic Acid">Folic Acid</option>
+    </select>
+  </label><br>
+  <label>dailyValue:
+    <input type="number" name="dailyValue">
+  </label><br>
+  <button type="submit">Add Fruit</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
