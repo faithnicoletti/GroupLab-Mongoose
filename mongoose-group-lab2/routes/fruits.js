@@ -8,8 +8,8 @@ router.get('/new', fruitsController.new);
 router.post('/', fruitsController.create);
 
 router.get('/:id', fruitsController.show);
+router.get('/edit/:id', fruitsController.edit);
 router.put('/:id', fruitsController.update);
-router.get('/:id/edit', fruitsController.edit);
-//router.delete('/:id', fruitsControllers/:id);
+router.delete('/:id', fruitsController.delete);
 
 module.exports = router;

@@ -1,13 +1,22 @@
 <%- include('../partials/header') %>
-<h2>Edit this fruit:</h2>
-<form action="/fruits/<%= fruit.id %>" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" value="<%= fruit.name %>"><br>
-    <label for="vitamins">Vitamins:</label>
-    <input type="text" name="vitamins" id="vitamins" value="<%= fruit.vitamins %>"><br>
-    <label for="dailyValue">Daily Value:</label>
-    <input type="number" name="dailyValue" id="dailyValue" value="<%= fruit.dailyValue %>"><br>
-    <button type="submit">Update</button>
-  </form>
-  
-  <%- include('../partials/footer') %>
+
+<h2>Edit Fruit</h2>
+<form action="/fruits/<%= fruit.id %>?_method=PUT" method="POST">
+  <label>Name:
+    <input type="text" name="name" value="<%= fruit.name %>">
+  </label><br>
+  <label>Vitamins:
+    <select name="vitamins">
+      <option value="Vitamin A" <%= fruit.vitamins === 'Vitamin A' ? 'selected' : '' %>>Vitamin A</option>
+      <option value="Vitamin B" <%= fruit.vitamins === 'Vitamin B' ? 'selected' : '' %>>Vitamin B</option>
+      <option value="Vitamin C" <%= fruit.vitamins === 'Vitamin C' ? 'selected' : '' %>>Vitamin C</option>
+      <option value="Folic Acid" <%= fruit.vitamins === 'Folic Acid' ? 'selected' : '' %>>Folic Acid</option>
+    </select>
+  </label><br>
+  <label>Daily Value:
+    <input type="number" name="dailyValue" value="<%= fruit.dailyValue %>">
+  </label><br>
+  <input type="submit"/>
+</form>
+
+<%- include('../partials/footer') %>
