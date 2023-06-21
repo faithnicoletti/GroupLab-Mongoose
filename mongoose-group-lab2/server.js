@@ -9,7 +9,6 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var fruitsRouter = require('./routes/fruits');
-const fruitsController = require('./controllers/fruits');
 
 var app = express();
 

@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
 
-<h2>Fruit Details</h2>
+<h2>Fruit Details(show PAGE)</h2>
 <p>Name: <%= fruit.name %></p>
 <p>Vitamins: <%= fruit.vitamins %></p>
 <p>Daily Value: <%= fruit.dailyValue %></p>
+<a href="/fruits/<%= fruit.id %>/edit">Edit</a>
 
 <%- include('../partials/footer') %>

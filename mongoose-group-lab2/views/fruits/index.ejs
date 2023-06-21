@@ -1,16 +1,12 @@
 <%- include('../partials/header') %>
-
+<body>
 <h2>All Fruits</h2>
-<tbody>
+<a href="/fruits/new"> Create New Fruit</a>
   <ul>
-    <% fruits.forEach((fruit) => { %>
-      <li>
-        <a href="/fruits/<%= fruit.id %>"><%= fruit.name %></a>
-        <!-- <br>Vitamins: <%= fruit.vitamins %><br>
-        Daily Value: <%= fruit.dailyValue %> -->
-      </li>
-    <% }); %>
+    <% fruits.forEach((fruit) => {%>
+      <li><a href="/fruits/<%= fruit.id %>"><%= fruit.name %></a></li>
+    <% }) %>
   </ul>
-</tbody>
+</body>
 
 <%- include('../partials/footer') %>

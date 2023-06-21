@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<h2>Edit this fruit:</h2>
+<form action="/fruits/<%= fruit.id %>" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= fruit.name %>"><br>
+    <label for="vitamins">Vitamins:</label>
+    <input type="text" name="vitamins" id="vitamins" value="<%= fruit.vitamins %>"><br>
+    <label for="dailyValue">Daily Value:</label>
+    <input type="number" name="dailyValue" id="dailyValue" value="<%= fruit.dailyValue %>"><br>
+    <button type="submit">Update</button>
+  </form>
+  
+  <%- include('../partials/footer') %>
