@@ -9,7 +9,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var fruitsRouter = require('./routes/fruits');
-
+const methodOverride = require('method-override');
 var app = express();
 
 // view engine setup
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/fruits', fruitsRouter);
 

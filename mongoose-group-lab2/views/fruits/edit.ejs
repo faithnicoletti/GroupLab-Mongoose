@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Edit Fruit</h2>
-<form action="/fruits/<%= fruit.id %>?_method=PUT" method="POST">
+<form action="/fruits/<%=fruit.id%>?_method=PUT" method="POST">
   <label>Name:
     <input type="text" name="name" value="<%= fruit.name %>">
   </label><br>
